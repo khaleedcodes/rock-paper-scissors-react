@@ -1,1 +1,4 @@
-export default function App() {}
+import GamePage from "./GamePage";
+export default function App() {
+  return <GamePage />;
+}
