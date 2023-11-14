@@ -1,6 +1,10 @@
+type MoveName = "rock" | "paper" | "scissors";
+type IconColor = "red" | "green" | "blue";
+
 type MoveIconProps = {
+  moveName: MoveName;
   iconSource: string;
   iconColor: IconColor;
 };
-type IconColor = "red" | "green" | "blue";
-export type { MoveIconProps, IconColor };
+
+export type { MoveIconProps };

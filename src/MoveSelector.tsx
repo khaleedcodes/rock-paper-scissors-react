@@ -7,9 +7,13 @@ import MoveIcon from "./MoveIcon";
 export default function MoveSelector() {
   return (
     <div className="flex">
-      <MoveIcon iconSource={rockIcon} iconColor="red" />
-      <MoveIcon iconSource={paperIcon} iconColor="green" />
-      <MoveIcon iconSource={scissorsIcon} iconColor="blue" />
+      <MoveIcon moveName="rock" iconSource={rockIcon} iconColor="red" />
+      <MoveIcon moveName="paper" iconSource={paperIcon} iconColor="green" />
+      <MoveIcon
+        moveName="scissors"
+        iconSource={scissorsIcon}
+        iconColor="blue"
+      />
     </div>
   );
 }

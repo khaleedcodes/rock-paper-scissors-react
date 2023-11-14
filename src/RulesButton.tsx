@@ -1,3 +1,3 @@
 export default function RulesButton() {
-  return <div>RulesButton</div>;
+  return <button className=" border-slate-50">Rules</button>;
 }
