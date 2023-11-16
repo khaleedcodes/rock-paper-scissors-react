@@ -1,13 +1,10 @@
 //import types
-import { MoveSelectionPageProps } from "../lib/types";
-
-//import icons
-import rockIcon from "./images/icon-rock.svg";
-import paperIcon from "./images/icon-paper.svg";
-import scissorsIcon from "./images/icon-scissors.svg";
+import type { MoveSelectionPageProps } from "../../../lib/types";
 
 //import move icon component
-import MoveIcon from "./MoveIcon";
+import RockIcon from "../move-icons/RockIcon";
+import PaperIcon from "../move-icons/PaperIcon";
+import ScissorsIcon from "../move-icons/ScissorsIcon";
 
 /**
  * Renders a component that allows the user to select a move (rock, paper, or scissors).
@@ -21,24 +18,15 @@ export default function MoveSelector({
 }: MoveSelectionPageProps) {
   return (
     <div className="flex">
-      <MoveIcon
-        moveName="rock"
-        iconSource={rockIcon}
-        iconColor="red"
+      <RockIcon
         setIsMoveSelected={setIsMoveSelected}
         setPlayerMove={setPlayerMove}
       />
-      <MoveIcon
-        moveName="paper"
-        iconSource={paperIcon}
-        iconColor="green"
+      <PaperIcon
         setIsMoveSelected={setIsMoveSelected}
         setPlayerMove={setPlayerMove}
       />
-      <MoveIcon
-        moveName="scissors"
-        iconSource={scissorsIcon}
-        iconColor="blue"
+      <ScissorsIcon
         setIsMoveSelected={setIsMoveSelected}
         setPlayerMove={setPlayerMove}
       />

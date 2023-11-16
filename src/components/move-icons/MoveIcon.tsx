@@ -1,4 +1,4 @@
-import { type MoveIconProps } from "../lib/types";
+import { type MoveIconProps } from "../../../lib/types";
 
 /**
  * A component that displays a move icon and handles click events.
@@ -15,12 +15,11 @@ export default function MoveIcon({
   setIsMoveSelected,
   setPlayerMove,
 }: MoveIconProps) {
-  console.log(moveName);
   return (
     <button
       onClick={() => {
-        setIsMoveSelected(true);
-        setPlayerMove(moveName);
+        setIsMoveSelected !== undefined && setIsMoveSelected(true);
+        setPlayerMove !== undefined && setPlayerMove(moveName);
       }}
       className={`flex items-center justify-center bg-slate-50 border-[20px] border-${iconColor}-700 rounded-full w-40 h-40`}
     >

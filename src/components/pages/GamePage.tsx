@@ -1,15 +1,16 @@
 import { useState } from "react";
-import ScoreBoard from "./ScoreBoard";
-import MoveSelectionPage from "./MoveSelectionPage";
-import ResultPage from "./ResultPage";
-import RulesButton from "./RulesButton";
+import ScoreBoard from "../ScoreBoard";
+import MoveSelectionPage from "../../components/pages/MoveSelectionPage";
+import ResultPage from "../../components/pages/ResultPage";
+import RulesButton from "../buttons/RulesButton";
+import { MoveName } from "../../../lib/types";
 /**
  * Renders the game page component.
  * @returns The game page component.
  */
 export default function GamePage() {
   const [isMoveSelected, setIsMoveSelected] = useState(false);
-  const [playerMove, setPlayerMove] = useState("");
+  const [playerMove, setPlayerMove] = useState<MoveName>("");
 
   return (
     <div className=" w-full h-full flex flex-col">
@@ -20,7 +21,7 @@ export default function GamePage() {
           setPlayerMove={setPlayerMove}
         />
       ) : (
-        <ResultPage playerMove={playerMove} />
+        <ResultPage setIsMoveSelected={setIsMoveSelected} playerMove={playerMove} />
       )}
       <RulesButton />
     </div>
