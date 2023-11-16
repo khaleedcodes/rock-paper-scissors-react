@@ -5,6 +5,10 @@ type MoveIconProps = {
   moveName: MoveName;
   iconSource: string;
   iconColor: IconColor;
+  onClick: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export type { MoveIconProps };
+type MoveSelectionPageProps = {
+  setIsMoveSelected: React.Dispatch<React.SetStateAction<boolean>>;
+};
+export type { MoveIconProps, MoveSelectionPageProps };
