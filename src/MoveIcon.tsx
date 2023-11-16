@@ -12,13 +12,15 @@ export default function MoveIcon({
   moveName,
   iconSource,
   iconColor,
-  onClick,
+  setIsMoveSelected,
+  setPlayerMove,
 }: MoveIconProps) {
   console.log(moveName);
   return (
     <button
       onClick={() => {
-        onClick(true);
+        setIsMoveSelected(true);
+        setPlayerMove(moveName);
       }}
       className={`flex items-center justify-center bg-slate-50 border-[20px] border-${iconColor}-700 rounded-full w-40 h-40`}
     >

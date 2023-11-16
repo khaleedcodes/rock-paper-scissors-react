@@ -1,3 +1,5 @@
+import type { ResultPageProps } from "../lib/types";
+
 function generateRandomNumber() {
   const randomNumber = Math.floor(Math.random() * 3);
   return randomNumber;
@@ -12,14 +14,16 @@ function generateComputerMove() {
     return "scissors";
   }
 }
-export default function Result() {
+export default function ResultPage({ playerMove }: ResultPageProps) {
   const computerMove = generateComputerMove();
-  console.log(computerMove);
+  console.log("player move: " + playerMove);
+  console.log("computer move: " + computerMove);
   return (
     <div>
       <div>
         <h2>player picked</h2>
       </div>
+      
       <div>
         <h1>computer picked {computerMove}</h1>
       </div>

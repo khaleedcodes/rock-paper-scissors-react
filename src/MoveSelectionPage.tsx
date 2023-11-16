@@ -17,26 +17,30 @@ import MoveIcon from "./MoveIcon";
  */
 export default function MoveSelector({
   setIsMoveSelected,
+  setPlayerMove,
 }: MoveSelectionPageProps) {
   return (
     <div className="flex">
       <MoveIcon
-        onClick={setIsMoveSelected}
         moveName="rock"
         iconSource={rockIcon}
         iconColor="red"
+        setIsMoveSelected={setIsMoveSelected}
+        setPlayerMove={setPlayerMove}
       />
       <MoveIcon
-        onClick={setIsMoveSelected}
         moveName="paper"
         iconSource={paperIcon}
         iconColor="green"
+        setIsMoveSelected={setIsMoveSelected}
+        setPlayerMove={setPlayerMove}
       />
       <MoveIcon
-        onClick={setIsMoveSelected}
         moveName="scissors"
         iconSource={scissorsIcon}
         iconColor="blue"
+        setIsMoveSelected={setIsMoveSelected}
+        setPlayerMove={setPlayerMove}
       />
     </div>
   );
