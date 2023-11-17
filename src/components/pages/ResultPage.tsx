@@ -17,13 +17,13 @@ import ScissorsIcon from "../move-icons/ScissorsIcon";
 import PlayAgainButton from "../buttons/PlayAgainButton";
 
 //function to generate random number
-function generateRandomNumber() {
+function generateRandomNumber(): number {
   const randomNumber = Math.floor(Math.random() * 3);
   return randomNumber;
 }
 
 //function to generate computer move
-function generateComputerMove() {
+function generateComputerMove(): MoveName {
   const randomNumber = generateRandomNumber();
   if (randomNumber === 0) {
     return "rock";
@@ -96,7 +96,7 @@ export default function ResultPage({
     determineScores(outcome, setScores, scores);
   });
   return (
-    <div>
+    <div className="flex">
       <div>
         <h2>player picked</h2>
         {playerMove === "rock" ? (
