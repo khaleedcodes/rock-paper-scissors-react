@@ -6,7 +6,7 @@ import type {
 } from "../../../lib/types";
 
 //import states
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 //import move components
 import RockIcon from "../move-icons/RockIcon";
@@ -57,44 +57,44 @@ function compareMove(
 }
 
 //function to determine score
-function determineScores(
-  outcome: GameOutcome,
-  setScores: React.Dispatch<
-    React.SetStateAction<{
-      playerScore: number;
-      computerScore: number;
-    }>
-  >,
-  scores: {
-    playerScore: number;
-    computerScore: number;
-  }
-) {
-  if (outcome === "win") {
-    setScores({
-      playerScore: scores.playerScore + 1,
-      computerScore: scores.computerScore,
-    });
-  } else if (outcome === "lose") {
-    setScores({
-      playerScore: scores.playerScore,
-      computerScore: scores.computerScore + 1,
-    });
-  }
-}
+// function determineScores(
+//   outcome: GameOutcome,
+//   setScores: React.Dispatch<
+//     React.SetStateAction<{
+//       playerScore: number;
+//       computerScore: number;
+//     }>
+//   >,
+//   scores: {
+//     playerScore: number;
+//     computerScore: number;
+//   }
+// ) {
+//   if (outcome === "win") {
+//     console.log("added to player");
+//     setScores({
+//       playerScore: scores.playerScore + 1,
+//       computerScore: scores.computerScore,
+//     });
+//   } else if (outcome === "lose") {
+//     console.log("added to computer");
+//     setScores({
+//       playerScore: scores.playerScore,
+//       computerScore: scores.computerScore + 1,
+//     });
+//   }
+// }
 
 export default function ResultPage({
   playerMove,
   setIsMoveSelected,
-  scores,
-  setScores,
+  // scores,
+  // setScores,
 }: ResultPageProps) {
   const computerMove = generateComputerMove();
   const outcome = compareMove(playerMove, computerMove);
+  // determineScores(outcome, setScores, scores);
 
-  useEffect(() => {
-    determineScores(outcome, setScores, scores);
-  });
   return (
     <div className="flex">
       <div>

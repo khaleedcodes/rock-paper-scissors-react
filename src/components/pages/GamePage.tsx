@@ -12,8 +12,8 @@ import RulesButton from "../buttons/RulesButton";
 export default function GamePage() {
   const [isMoveSelected, setIsMoveSelected] = useState(false);
   const [playerMove, setPlayerMove] = useState<MoveName>("");
-  const [scores, setScores] = useState({ playerScore: 0, computerScore: 0 });
-  console.log(scores.playerScore, scores.computerScore);
+  // const [scores, setScores] = useState({ playerScore: 0, computerScore: 0 });
+  // console.log(scores.playerScore, scores.computerScore);
 
   return (
     <div className=" w-full h-full flex flex-col">
@@ -27,8 +27,8 @@ export default function GamePage() {
         <ResultPage
           setIsMoveSelected={setIsMoveSelected}
           playerMove={playerMove}
-          setScores={setScores}
-          scores={scores}
+          // setScores={setScores}
+          // scores={scores}
         />
       )}
       <RulesButton />
