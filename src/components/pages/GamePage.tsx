@@ -16,7 +16,7 @@ export default function GamePage() {
   // console.log(scores.playerScore, scores.computerScore);
 
   return (
-    <div className=" w-full h-full flex flex-col">
+    <div className=" w-full h-full flex flex-col items-center m-10 gap-52">
       <ScoreBoard />
       {!isMoveSelected ? (
         <MoveSelectionPage
