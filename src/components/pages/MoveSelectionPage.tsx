@@ -6,12 +6,7 @@ import RockIcon from "../move-icons/RockIcon";
 import PaperIcon from "../move-icons/PaperIcon";
 import ScissorsIcon from "../move-icons/ScissorsIcon";
 
-/**
- * Renders a component that allows the user to select a move (rock, paper, or scissors).
- * @param {Object} props - The component props.
- * @param {Function} props.setIsMoveSelected - A function to set whether a move has been selected.
- * @returns {JSX.Element} - The MoveSelector component.
- */
+
 export default function MoveSelector({
   setIsMoveSelected,
   setPlayerMove,

@@ -1,17 +1,28 @@
+//import types
 import type {
   ResultPageProps,
   MoveName,
   GameOutcome,
 } from "../../../lib/types";
+
+//import states
+import { useEffect } from "react";
+
+//import move components
 import RockIcon from "../move-icons/RockIcon";
 import PaperIcon from "../move-icons/PaperIcon";
 import ScissorsIcon from "../move-icons/ScissorsIcon";
+
+//import play again button
 import PlayAgainButton from "../buttons/PlayAgainButton";
 
+//function to generate random number
 function generateRandomNumber() {
   const randomNumber = Math.floor(Math.random() * 3);
   return randomNumber;
 }
+
+//function to generate computer move
 function generateComputerMove() {
   const randomNumber = generateRandomNumber();
   if (randomNumber === 0) {
@@ -22,6 +33,8 @@ function generateComputerMove() {
     return "scissors";
   }
 }
+
+//function to compare move
 function compareMove(
   playerMove: MoveName,
   computerMove: MoveName
@@ -43,13 +56,45 @@ function compareMove(
   }
 }
 
+//function to determine score
+function determineScores(
+  outcome: GameOutcome,
+  setScores: React.Dispatch<
+    React.SetStateAction<{
+      playerScore: number;
+      computerScore: number;
+    }>
+  >,
+  scores: {
+    playerScore: number;
+    computerScore: number;
+  }
+) {
+  if (outcome === "win") {
+    setScores({
+      playerScore: scores.playerScore + 1,
+      computerScore: scores.computerScore,
+    });
+  } else if (outcome === "lose") {
+    setScores({
+      playerScore: scores.playerScore,
+      computerScore: scores.computerScore + 1,
+    });
+  }
+}
+
 export default function ResultPage({
   playerMove,
   setIsMoveSelected,
+  scores,
+  setScores,
 }: ResultPageProps) {
   const computerMove = generateComputerMove();
   const outcome = compareMove(playerMove, computerMove);
-  console.log(outcome);
+
+  useEffect(() => {
+    determineScores(outcome, setScores, scores);
+  });
   return (
     <div>
       <div>
@@ -63,7 +108,7 @@ export default function ResultPage({
         )}
       </div>
       <div>you {outcome}</div>
-      <PlayAgainButton setIsMoveSelected={setIsMoveSelected}/>
+      <PlayAgainButton setIsMoveSelected={setIsMoveSelected} />
       <div>
         <h1>computer picked {computerMove}</h1>
         {computerMove === "rock" ? (

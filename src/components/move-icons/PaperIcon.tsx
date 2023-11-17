@@ -1,5 +1,9 @@
-import { IndividualIconProps } from "../../../lib/types";
+//import types
+import type { IndividualIconProps } from "../../../lib/types";
+
+//import paper icon
 import paperIcon from "../../images/icon-paper.svg";
+//import move template
 import MoveIcon from "./MoveIcon";
 
 export default function PaperIcon({

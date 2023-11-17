@@ -1,4 +1,5 @@
-import { PlayAgainButtonProps } from "../../../lib/types";
+//import types
+import type { PlayAgainButtonProps } from "../../../lib/types";
 
 export default function PlayAgainButton({
   setIsMoveSelected,

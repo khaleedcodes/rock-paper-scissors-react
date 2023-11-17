@@ -1,13 +1,6 @@
+//import types
 import { type MoveIconProps } from "../../../lib/types";
 
-/**
- * A component that displays a move icon and handles click events.
- * @param moveName - The name of the move.
- * @param iconSource - The source URL of the move icon.
- * @param iconColor - The color of the move icon.
- * @param onClick - The function to be called when the icon is clicked.
- * @returns A button element containing the move icon.
- */
 export default function MoveIcon({
   moveName,
   iconSource,

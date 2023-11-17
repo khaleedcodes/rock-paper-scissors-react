@@ -18,11 +18,25 @@ type MoveSelectionPageProps = IndividualIconProps;
 type ResultPageProps = {
   playerMove: MoveName;
   setIsMoveSelected?: React.Dispatch<React.SetStateAction<boolean>>;
+  scores: {
+    playerScore: number;
+    computerScore: number;
+  };
+  setScores: React.Dispatch<
+    React.SetStateAction<{
+      playerScore: number;
+      computerScore: number;
+    }>
+  >;
 };
 
 type PlayAgainButtonProps = {
   setIsMoveSelected?: React.Dispatch<React.SetStateAction<boolean>>;
 };
+
+// type ScoreBoardProps ={
+
+// }
 
 export type {
   GameOutcome,
