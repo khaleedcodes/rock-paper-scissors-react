@@ -1,8 +1,8 @@
 //import types
-import { IndividualIconProps } from "../../../lib/types";
+import { IndividualIconProps } from "../../types/types";
 
 //import rock icon
-import scissorsIcon from "../../images/icon-scissors.svg";
+import scissorsIcon from "../../assets/images/icon-scissors.svg";
 //import move template
 import MoveIcon from "./MoveIcon";
 

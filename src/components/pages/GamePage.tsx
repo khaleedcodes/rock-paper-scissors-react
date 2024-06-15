@@ -1,5 +1,5 @@
 //import types
-import { MoveName } from "../../../lib/types";
+import { MoveName } from "../../types/types";
 
 //import react hooks
 import { useState } from "react";

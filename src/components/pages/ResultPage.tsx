@@ -3,7 +3,7 @@ import type {
   ResultPageProps,
   MoveName,
   GameOutcome,
-} from "../../../lib/types";
+} from "../../types/types";
 
 //import states
 // import { useEffect } from "react";

@@ -1,4 +1,5 @@
-import logo from "../images/logo.svg";
+// import logo from "../images/logo.svg";
+import logo from "../assets/images/logo.svg";
 export default function ScoreBoard() {
   return (
     <div className="border-2 border-black flex">

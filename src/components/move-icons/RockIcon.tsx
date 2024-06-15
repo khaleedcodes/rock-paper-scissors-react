@@ -1,8 +1,8 @@
 //import types
-import type { IndividualIconProps } from "../../../lib/types";
+import type { IndividualIconProps } from "../../types/types";
 
 //import rock icon
-import rockIcon from "../../images/icon-rock.svg";
+import rockIcon from "../../assets/images/icon-rock.svg";
 //import move template
 import MoveIcon from "./MoveIcon";
 
